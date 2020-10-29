@@ -1,4 +1,4 @@
-
+//Esta clase es la encargada de mostrar la presentacion del cajero y mostrar las opciones que el usuario puede escoger
 public class Text {
 	
 	public void presentacion() {

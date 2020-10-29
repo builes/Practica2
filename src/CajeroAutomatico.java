@@ -1,3 +1,6 @@
+//En esta clase crearemos los metodos solicitados en el ejercicio los cuales llamaremos desde la clase main
+//Todos los metodos creados fueron estaticos para poder llamarlos sin la necesidad de crear un objeto de esta clase en Main
+
 import java.util.*;
 
 public class CajeroAutomatico {
@@ -5,6 +8,7 @@ public class CajeroAutomatico {
 	static Scanner entrada = new Scanner(System.in);
 	static ArrayList<Cliente> clientes = Cliente.getClientes();
 	
+//	Este metodo verifica que la cedula ingresada no se encuente en el sistema para poder registrar el usuario
 	public static void registrarCliente() {
 		
 		System.out.println("                  //---------------------//--------------------//---------------------//");
@@ -34,6 +38,7 @@ public class CajeroAutomatico {
 		
 	}
 	
+	//Este metodo verifica que la cedula exista, en caso de que si solicita el monto a consignar y hace la consignacion
 	public static void realizarConsignacion() {
 		System.out.println("                  //---------------------//--------------------//---------------------//");
 		System.out.println("Ingresa la cedula del cliente a quien le deseas realizar la consignacion");
@@ -69,6 +74,8 @@ public class CajeroAutomatico {
 //		System.out.println("                  //---------------------//--------------------//---------------------//");
 //	}
 	
+	/*Este metodo verifica que tanto la cedula del depositante como el receptor exista y luego verifica que el depositante si tenga los fondos suficientes 
+	para realizar la tranferencia*/
 	public static void tranferenciaSaldo() {
 		System.out.println("                  //---------------------//--------------------//---------------------//");
 		System.out.println("Ingrese la cedula del depositante ");
@@ -115,7 +122,7 @@ public class CajeroAutomatico {
 	}
 	
 	
-	
+	//Este metodo se encarga de mostrar el saldo si la cedula se encuentra en el sistema
 	public static void mostrarSaldo() {
 		System.out.println("                  //---------------------//--------------------//---------------------//");
 		System.out.println("Ingresa la cedula del cliente de quien deseas ver el saldo");
@@ -134,6 +141,8 @@ public class CajeroAutomatico {
 		}
 	}
 	
+	
+	//Con este metodo mostramos todos los clientes registrados
 	public static void mostrarClientes() {
 		System.out.println("Informacion de los clientes");
 		for(Cliente cliente: Cliente.getClientes()) {
@@ -145,6 +154,8 @@ public class CajeroAutomatico {
 		}
 	}
 	
+	
+	//Este metodo elimina un cliente si el numero de cedula ingresado existe
 	public static void eliminarCliente() {
 		System.out.println("                  //---------------------//--------------------//---------------------//");
 		System.out.println("Ingresa la cedula del cliente a quien deseas eliminar");

@@ -16,7 +16,7 @@ public class Main {
 		Cliente cliente3 = new Cliente("3", "Luis", 50000);
 		Cliente cliente4 = new Cliente("4", "Julian", 10000);
 		
-		
+	
 		text.presentacion();
 		while(true) {
 			text.opciones();
