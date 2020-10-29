@@ -15,6 +15,7 @@ public class CajeroAutomatico {
 	    System.out.println("                  //---------------------//--------------------//---------------------//");
 		System.out.println("Ingrese la cedula del cliente");
 		String cedula = entrada.next();
+		entrada.nextLine(); 
 		boolean verificarCedula = false;
 		for (int i = 0; i < clientes.size(); i++) {
 			if(clientes.get(i).getCedula().equals(cedula)) {
@@ -27,7 +28,7 @@ public class CajeroAutomatico {
 		else {
 			System.out.println("                  //---------------------//--------------------//---------------------//");
 			System.out.println("Ingrese el nombre del cliente");
-			String nombre = entrada.next();
+			String nombre = entrada.nextLine();
 			System.out.println("                  //---------------------//--------------------//---------------------//");
 			System.out.println("Ingrese el saldo del cliente");
 			double saldo = entrada.nextInt();
